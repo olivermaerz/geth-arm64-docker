@@ -8,4 +8,4 @@ RUN apt-get -y install --fix-missing ethereum
 EXPOSE 8545
 EXPOSE 30303
 
-ENTRYPOINT ["/usr/bin/geth", "-rpc", "--cache 1024"]
+ENTRYPOINT ["/usr/bin/geth", "-rpc", "--cache=1024"]
