@@ -1,3 +1,3 @@
 # geth-arm64-docker
 
-Based on minimal Ubuntu image. Stores data in /data.
+Dockerfile for geth / Go Ethereum based on minimal Ubuntu image. Stores data in /data.
