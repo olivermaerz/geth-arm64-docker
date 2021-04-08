@@ -1,11 +1,9 @@
-FROM ubuntu:latest
-RUN apt-get -y update
-RUN apt-get -y install software-properties-common
-RUN add-apt-repository -y ppa:ethereum/ethereum
+FROM ubuntu:21.04
 RUN apt-get -y update && apt-get upgrade -y
-RUN apt-get -y install --fix-missing ethereum
+COPY geth /usr/bin
 
 EXPOSE 8545
 EXPOSE 30303
 
-ENTRYPOINT ["/usr/bin/geth", "-rpc", "--cache=1024"]
+ENTRYPOINT ["/usr/bin/geth"]
+
